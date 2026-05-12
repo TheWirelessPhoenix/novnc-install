@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Debian based Linux noVNC + TigerVNC + XFCE4 installation script
+# Debian based Linux noVNC + TigerVNC + i3 installation script
 # optional Nginx reverse proxy and Let's Encrypt setup
 # https://github.com/vtstv/novnc-install
 # novnc_setup.sh v0.8 by Murr
@@ -52,7 +52,7 @@ function install_vnc_novnc() {
   apt update && apt upgrade -y
 
   echo "Installing TigerVNC server and necessary tools..."
-  apt install -y tigervnc-standalone-server tigervnc-common git xfce4 xfce4-goodies dbus-x11 xfce4-terminal
+  apt install -y tigervnc-standalone-server tigervnc-common git i3-wm i3status dmenu xterm dbus-x11
 
   # Set up VNC password
   echo "Setting up VNC password..."
@@ -68,7 +68,7 @@ function install_vnc_novnc() {
 export XKL_XMODMAP_DISABLE=1
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
-startxfce4
+exec i3
 EOF"
   su - "$VNC_USER" -c "chmod +x ~/.vnc/xstartup"
 
@@ -390,7 +390,7 @@ function reinstall_nginx_reverse_proxy() {
 function main_menu() {
   while true; do
     echo "Choose an option:"
-    echo "1) Install noVNC with TigerVNC and XFCE4"
+    echo "1) Install noVNC with TigerVNC and i3"
     echo "2) Configure Nginx reverse proxy with Let's Encrypt"
     echo "3) Fix Nginx Configuration"
     echo "4) Reinstall Nginx Reverse Proxy Setup"
