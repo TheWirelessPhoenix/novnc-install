@@ -1,12 +1,12 @@
-# noVNC + TigerVNC + XFCE4 + Nginx Reverse Proxy + HTTP Basic Auth Installer
+# noVNC + TigerVNC + i3 + Nginx Reverse Proxy + HTTP Basic Auth Installer
 
 > A streamlined setup for a remote desktop environment on your Ubuntu server (and other Debian based like Kali linux).
 
-This script combines the power of **TigerVNC**, **noVNC**, and **XFCE4**, with an optional, secure **Nginx** reverse proxy powered by **Let's Encrypt** SSL certificates, to create a fully functional remote desktop environment.
+This script combines the power of **TigerVNC**, **noVNC**, and **i3**, with an optional, secure **Nginx** reverse proxy powered by **Let's Encrypt** SSL certificates, to create a fully functional remote desktop environment.
 
 ## ✨ Features
 
-*   **Effortless Installation:** Automates the installation and configuration of TigerVNC, noVNC, and the lightweight XFCE4 desktop environment.
+*   **Effortless Installation:** Automates the installation and configuration of TigerVNC, noVNC, and the lightweight i3 window manager.
 *   **Secure Access:** Optionally configures an Nginx reverse proxy with automatic SSL certificate generation and renewal via Let's Encrypt.
 *   **HTTP Basic Authentication:** Provides an extra layer of security with optional HTTP Basic Authentication for your reverse proxy.
 *   **Customizable:** Allows you to specify the VNC user, ports, display number, and hostname during setup.
@@ -21,7 +21,7 @@ This script combines the power of **TigerVNC**, **noVNC**, and **XFCE4**, with a
 
 The script provides an interactive menu to guide you through the installation and configuration process. You can choose to:
 
-1. Install noVNC with TigerVNC and XFCE4.
+1. Install noVNC with TigerVNC and i3.
 2. Configure an Nginx reverse proxy with Let's Encrypt SSL.
 3. Fix common Nginx configuration problems.
 4. Reinstall the Nginx reverse proxy setup.
