@@ -68,6 +68,7 @@ function install_vnc_novnc() {
 export XKL_XMODMAP_DISABLE=1
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
+export DESKTOP_SESSION=i3
 exec i3
 EOF"
   su - "$VNC_USER" -c "chmod +x ~/.vnc/xstartup"
